@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: demo-avp
+  namespace: avp-test
+  annotations:
+    avp.kubernetes.io/path: secret/kv/app/prod
+type: Opaque
+stringData:
+  username: <DB_USERNAME>
+  password: <DB_PASSWORD>
