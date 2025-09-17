@@ -4,7 +4,8 @@ metadata:
   name: demo-avp
   namespace: avp-test
   annotations:
-    avp.kubernetes.io/path: secret/data/kv/app/prod
+    avp.kubernetes.io/path: secret/kv/app/prod
+    avp.kubernetes.io/kv-version: "2"
 type: Opaque
 stringData:
   username: <DB_USERNAME>
