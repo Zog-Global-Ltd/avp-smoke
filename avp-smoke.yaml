@@ -1,12 +1,8 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: demo-avp
-  namespace: avp-test
-  annotations:
-    avp.kubernetes.io/path: secret/data/kv/app/prod
-    avp.kubernetes.io/kv-version: "2"
+  name: demo-secret
 type: Opaque
 stringData:
-  username: <DB_USERNAME>
-  password: <DB_PASSWORD>
+  username: ${vault:secret/data/argocd/demo#DB_USER}
+  password: ${vault:secret/data/argocd/demo#DB_PASS}
