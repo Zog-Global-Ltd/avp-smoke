@@ -1,8 +1,9 @@
+# manifests/secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
-  name: demo-secret
+  name: avp-smoke
 type: Opaque
 stringData:
-  username: ${vault:secret/data/argocd/demo#DB_USER}
-  password: ${vault:secret/data/argocd/demo#DB_PASS}
+  username: vault://secret/data/demo#username
+  password: vault://secret/data/demo#password
