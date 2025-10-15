@@ -5,5 +5,5 @@ metadata:
   name: avp-smoke
 type: Opaque
 stringData:
-  username: vault://secret/data/demo#username
-  password: vault://secret/data/demo#password
+  USERNAME: vault://kv/data/argocd/demo#username
+  PASSWORD: vault://kv/data/argocd/demo#password
