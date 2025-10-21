@@ -1,4 +1,4 @@
 # kustomization.yaml
 namespace: demo-secret
 resources:
-  - secret.yaml
+  - avp-smoke.yaml
