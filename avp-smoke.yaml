@@ -1,10 +1,11 @@
-# manifests/secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
   name: avp-smoke
   namespace: demo-secret
+  annotations:
+    avp.kubernetes.io/path: "kv/data/argocd/demo"   # KV v2 path
 type: Opaque
 stringData:
-  USERNAME: vault://kv/data/argocd/demo#username
-  PASSWORD: vault://kv/data/argocd/demo#password
+  USERNAME: <username>
+  PASSWORD: <password>
