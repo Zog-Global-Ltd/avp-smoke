@@ -3,9 +3,7 @@ kind: Secret
 metadata:
   name: avp-smoke
   namespace: demo-secret
-  annotations:
-    avp.kubernetes.io/path: "kv/data/argocd/demo"   # KV v2 path
 type: Opaque
 stringData:
-  USERNAME: <username>
-  PASSWORD: <password>
+  USERNAME: <path:kv/data/argocd/demo#username>
+  PASSWORD: <path:kv/data/argocd/demo#password>
