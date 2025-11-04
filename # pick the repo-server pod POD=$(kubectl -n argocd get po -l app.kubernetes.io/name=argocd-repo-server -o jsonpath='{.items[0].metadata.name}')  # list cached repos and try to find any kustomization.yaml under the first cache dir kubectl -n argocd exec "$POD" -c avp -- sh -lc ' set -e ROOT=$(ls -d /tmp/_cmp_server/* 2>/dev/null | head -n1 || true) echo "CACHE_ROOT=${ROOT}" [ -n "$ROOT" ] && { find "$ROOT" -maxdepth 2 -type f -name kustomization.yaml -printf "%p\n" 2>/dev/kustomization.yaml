@@ -1,6 +1,0 @@
-# put this next to avp-smoke.yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-# deploy into demo-secret (or omit this if you want to use the destination namespace in the Argo CD app)
-resources:
-  - avp-smoke.yaml   # <- this MUST match the actual filename in git
