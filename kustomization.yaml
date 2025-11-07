@@ -1,5 +1,6 @@
 # kustomization.yaml (in the repo at the chosen path)
 apiVersion: kustomize.config.k8s.io/v1beta1
+namespace: demo-secret
 kind: Kustomization
 resources:
   - avp-smoke.yaml    # must match the real filename
